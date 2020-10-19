@@ -1,6 +1,6 @@
 exports.run = (client, msg, args) => {
 
-    //msg.channel.send('Hello? Anyone There?', {tts: true});
+    msg.channel.send('Hello? Anyone There?', {tts: true});
 
 
 };
