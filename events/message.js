@@ -1,4 +1,4 @@
-const { prefix } = require('../config.js');
+//const { prefix } = require('../config.js');
 
 /*module.exports = (client, msg) => {
     if (msg.author.bot) return;
@@ -13,9 +13,9 @@ const { prefix } = require('../config.js');
 
 module.exports = (client, msg) => {
     if (msg.author.bot) return;
-    if (msg.content.indexOf(prefix)!== 0) return;
+    if (msg.content.indexOf(process.env.PREFIX)!== 0) return;
 
-    const args = msg.content.slice(prefix.length).trim().split(/ +/g);
+    const args = msg.content.slice(process.env.PREFIX.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 
     const cmd = client.commands.get(command);
