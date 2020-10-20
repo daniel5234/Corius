@@ -212,7 +212,7 @@ client.on("message", msg => {
 client.on("message", msg => {
     if(msg.author.id == "753282991970713652") return;
 
-    if (msg.content.toLowerCase.includes("i hate")) {
+    if (msg.content.toLowerCase().includes("i hate")) {
         msg.channel.send(`Don't worry, I <3 you ;)`);
     }
 
