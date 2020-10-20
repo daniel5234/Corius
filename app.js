@@ -209,6 +209,14 @@ client.on("message", msg => {
     }
 
 });
+client.on("message", msg => {
+    if(msg.author.id == "753282991970713652") return;
+
+    if (msg.content.includes(" i hate ")) {
+        msg.channel.send(`It's okay to not know! How can I help you?`);
+    }
+
+});
 
 /*
 client.on("message", msg => {
