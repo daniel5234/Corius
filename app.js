@@ -231,8 +231,8 @@ client.on("message", msg => {
 
 });*/
 
-bot.afk = new Map();
-bot.on("message", async message => {
+client.afk = new Map();
+client.on("message", async message => {
   if (message.author.bot) return;
   if (message.channel.type === "dm") return;
 
@@ -245,11 +245,11 @@ bot.on("message", async message => {
   // return message.reply(`you have been removed from the afk list!`).then(msg => msg.delete(5000));
 
   if (message.content.includes(message.mentions.members.first())) {
-    let mentioned = bot.afk.get(message.mentions.users.first().id);
+    let mentioned = client.afk.get(message.mentions.users.first().id);
     if (mentioned) message.channel.send(`**${mentioned.usertag}** is currently afk. Reason: ${mentioned.reason}`);
   }
-  let afkcheck = bot.afk.get(message.author.id);
-  if (afkcheck) return [bot.afk.delete(message.author.id), message.reply(`you have been removed from the afk list!`).then(msg => msg.delete(5000))];
+  let afkcheck = client.afk.get(message.author.id);
+  if (afkcheck) return [client.afk.delete(message.author.id), message.reply(`you have been removed from the afk list!`).then(msg => msg.delete(5000))];
 
 });
 
