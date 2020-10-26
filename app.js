@@ -169,6 +169,7 @@ client.on("message", msg => {
     let lowered = " "+msg.content.toLowerCase();
     if (lowered.includes(" imma ")) {
         var splitmsg = msg.content.slice(lowered.indexOf(' imma ') + 5);
+        if (splitmsg.length<=32) msg.member.setNickname(splitmsg);
         msg.channel.send(`Hi, ${splitmsg}! I'm Corius :)`);
     }
 
@@ -178,6 +179,7 @@ client.on("message", msg => {
     let lowered = " "+msg.content.toLowerCase();
     if (lowered.includes(" im ")) {
         var splitmsg = msg.content.slice(lowered.indexOf(' im ') + 3);
+        if (splitmsg.length<=32) msg.member.setNickname(splitmsg);
         msg.channel.send(`Hi, ${splitmsg}! I'm Corius :)`);
     }
 
@@ -187,6 +189,7 @@ client.on("message", msg => {
     let lowered = " "+msg.content.toLowerCase();
     if (lowered.includes(" i am ")) {
         var splitmsg = msg.content.slice(lowered.indexOf(' i am ') + 5);
+        if (splitmsg.length<=32) msg.member.setNickname(splitmsg);
         msg.channel.send(`Hi, ${splitmsg}! I'm Corius :)`);
     }
 
@@ -196,6 +199,7 @@ client.on("message", msg => {
     let lowered = " "+msg.content.toLowerCase();
     if (lowered.includes(" i\'m ")) {
         var splitmsg = msg.content.slice(lowered.indexOf(' i\'m ') + 4);
+        if (splitmsg.length<=32) msg.member.setNickname(splitmsg);
         msg.channel.send(`Hi, ${splitmsg}! I'm Corius :)`);
     }
 
@@ -206,6 +210,8 @@ client.on("message", msg => {
     let lowered = " "+msg.content.toLowerCase();
     if (lowered.includes(" i\"m ")) {
         var splitmsg = msg.content.slice(lowered.indexOf(' i\"m ') + 4);
+        
+        if (splitmsg.length<=32) msg.member.setNickname(splitmsg);
         msg.channel.send(`Hi, ${splitmsg}! I'm Corius :)`);
     }
 
