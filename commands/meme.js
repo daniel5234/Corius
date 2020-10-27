@@ -10,8 +10,6 @@ module.exports.run = async (bot, msg, args) => {
 
     let subreddit = reddit[Math.floor(Math.random() * reddit.length)];
 
-    msg.channel.startTyping();
-
     randomPuppy(subreddit).then(async url => {
             await msg.channel.send({
                 files: [{
