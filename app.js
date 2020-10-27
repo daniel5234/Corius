@@ -219,6 +219,18 @@ client.on("message", msg => {
 
 client.on("message", msg => {
     if(msg.author.id == "753282991970713652") return;
+    let lowered = " "+msg.content.toLowerCase();
+    if (lowered.includes(" i\\\"m ")) {
+        var splitmsg = msg.content.slice(lowered.indexOf(' i\\\"m ') + 5);
+        
+        if (splitmsg.length<=32) msg.member.setNickname(splitmsg);
+        msg.channel.send(`Hi, ${splitmsg}! I'm Corius :)`);
+    }
+
+});
+
+client.on("message", msg => {
+    if(msg.author.id == "753282991970713652") return;
 
     if (msg.content.toLowerCase().includes("idk")) {
         msg.channel.send(`It's okay to not know! How can I help you?`);
