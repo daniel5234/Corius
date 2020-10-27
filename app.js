@@ -220,8 +220,8 @@ client.on("message", msg => {
 client.on("message", msg => {
     if(msg.author.id == "753282991970713652") return;
     let lowered = " "+msg.content.toLowerCase();
-    if (lowered.includes(" i\\\"m ")) {
-        var splitmsg = msg.content.slice(lowered.indexOf(' i\\\"m ') + 5);
+    if (lowered.includes(" i\\"m ")) {
+        var splitmsg = msg.content.slice(lowered.indexOf(' i\\"m ') + 4);
         
         if (splitmsg.length<=32) msg.member.setNickname(splitmsg);
         msg.channel.send(`Hi, ${splitmsg}! I'm Corius :)`);
