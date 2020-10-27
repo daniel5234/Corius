@@ -202,7 +202,7 @@ client.on("message", msg => {
     }
 
 });
-*/
+
 
 client.on("message", msg => {
     if(msg.author.id == "753282991970713652") return;
@@ -220,7 +220,7 @@ client.on("message", msg => {
     }
 
 });
-
+*/
 /*
 client.on("message", msg => {
     if(msg.author.id == "753282991970713652") return;
