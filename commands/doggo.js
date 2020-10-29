@@ -15,7 +15,7 @@ exports.run = async (client, msg, args) => {
         .setFooter('A random dog!!')
         .setTimestamp();
 
-    msg.channel.send(embed);
+    msg.channel.send(embed).then(message => { message.react("👍").then(() => message.react('👎'))});
 
 };
 
