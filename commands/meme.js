@@ -18,7 +18,7 @@ module.exports.run = async (bot, msg, args) => {
                     name: 'meme.png'
                 }]
             }).then(sentEmbed => 
-                    sentEmbed.react("👍")});
+                    sentEmbed.react("👍"))});
 
             
             //then(function(message) { message.react(message.guild.emojis.find('name', "thumbsup"))});
