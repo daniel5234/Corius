@@ -17,8 +17,10 @@ module.exports.run = async (bot, msg, args) => {
                     attachment: url,
                     name: 'meme.png'
                 }]
-            }).then(sentEmbed => sentEmbed.react("👍"))
-            .then(sentEmbed => sentEmbed.react("👎"))});
+            }).then(sentEmbed => {
+                    sentEmbed.react("👍")
+                    sentEmbed.react("👎")
+            })});
 
 };
 
