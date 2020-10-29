@@ -127,13 +127,13 @@ client.on("messageDelete", msg => {
     }
 })*/
 
-/*client.on("message", msg => {
+client.on("message", msg => {
     let charArray = msg.content.split("");
     let wordArray = msg.content.split(/([_\W])/);
 
     //console.log(wordArray);
-    let filterChars = ["e", "E","a","A"];
-    let filterWords = ["out","the","lolol","lloll","pand","mid","in","pandemic", "middle","lol", "lmao", "LOL", "LMAO", "LMAOO", "lmaoo", "lolP", "LOLP", "LOLLL", "LAUGHING","OUT","LOUD","LMA","LO","OL"];
+    //let filterChars = ["e", "E","a","A"];
+    let filterWords = [":magnet:"];
 
     for(var i=0; i<filterWords.length; i++) {
         if(wordArray.includes(filterWords[i])) {
@@ -142,28 +142,15 @@ client.on("messageDelete", msg => {
         }
     }
 
-    for(var i=0; i<filterChars.length; i++) {
+    /*for(var i=0; i<filterChars.length; i++) {
         if(charArray.includes(filterChars[i])) {
             msg.delete();
             break;
         }
-    }
+    }*/
 
-});*/
-/*
-client.on("message", msg => {
-    if(!msg.channel.id=="757617115326054400") return;
-    let filterChars = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-    let chars = msg.content.split("");
-
-    for(var i=0; i<filterChars.length; i++) {
-        if(chars.includes(filterChars[i])) {
-            msg.delete();
-            break;
-        }
-    }
 });
-*/
+
 /*
 client.on("message", msg => {
     if(msg.author.id == "753282991970713652") return;
