@@ -5,7 +5,8 @@ module.exports.run = async (bot, msg, args) => {
     let reddit = [
         "dankmemes",
         "wholesomememes",
-        "amongus"    
+        "amongus",
+        "engrish"
     ];
 
     let subreddit = reddit[Math.floor(Math.random() * reddit.length)];
