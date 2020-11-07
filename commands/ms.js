@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const Minesweeper = require('discord.js-minesweeper');
 
 
-exports.run = async (client, msg, args) => 
+exports.run = (client, msg, args) => 
 /*
     const minesweeper = new Minesweeper({
     	rows: 8,
