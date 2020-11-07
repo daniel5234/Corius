@@ -9,7 +9,9 @@ exports.run = (client, msg, args) => {
     	columns: 8,
     	mines: 8,
     	emote: 'boom',
+	spaces: true,
     	zeroFirstCell: true,
+	revealFirstCell: true,
     	returnType: 'emoji',
 	});
 	var board = minesweeper.start();
