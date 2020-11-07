@@ -14,7 +14,7 @@ exports.run = async (client, msg, args) =>
 	});
 
 	const board = minesweeper.start();
-	return board ? message.channel.send(board) : message.channel.send(':warning: You have provided invalid data.');
+	return board ? msg.channel.send(board) : msg.channel.send(':warning: You have provided invalid data.');
 
 };
 
