@@ -2,10 +2,8 @@ const Discord = require('discord.js');
 const Minesweeper = require('discord.js-minesweeper');
 
 
-exports.run = async (client, msg, args) => {
+exports.run = async (client, msg, args) => 
 
-    
-    
     const minesweeper = new Minesweeper({
     	rows: 8,
     	columns: 8,
@@ -16,7 +14,7 @@ exports.run = async (client, msg, args) => {
 	});
 
 	const board = minesweeper.start();
-	msg.channel.send(board);
+	return board ? message.channel.send(board) : message.channel.send(':warning: You have provided invalid data.');
 
 };
 
