@@ -10,7 +10,7 @@ exports.run = (client, msg, args) => {
 	if (!row||!column||!mine) {
 		return msg.channel.send("`!ms <rows> <columns> <mines>`")
 	}
-
+	if (row>12||column>12) return msg.channel.send("Row/Column size too large. Max: 12");
     const minesweeper = new Minesweeper({
     	rows: row,
     	columns: column,
