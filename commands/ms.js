@@ -13,7 +13,7 @@ exports.run = async (client, msg, args) =>
     	returnType: 'emoji',
 	});
 
-	const board = minesweeper.start();
+	var board = minesweeper.start();
 	return board ? msg.channel.send(board) : msg.channel.send(':warning: You have provided invalid data.');
 
 };
