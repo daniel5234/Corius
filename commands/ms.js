@@ -17,7 +17,7 @@ exports.run = (client, msg, args) => {
     	mines: mine,
     	emote: 'boom',
 	spaces: true,
-    	zeroFirstCell: false,
+    	zeroFirstCell: true,
 	revealFirstCell: true,
     	returnType: 'emoji',
 	});
