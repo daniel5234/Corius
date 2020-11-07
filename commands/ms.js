@@ -7,15 +7,15 @@ exports.run = async (client, msg, args) => {
     
     
     const minesweeper = new Minesweeper({
-    	rows: 12,
-    	columns: 16,
-    	mines: 20,
+    	rows: 8,
+    	columns: 8,
+    	mines: 8,
     	emote: 'boom',
     	zeroFirstCell: true,
-    	returnType: 'code',
+    	returnType: 'emoji',
 	});
 
- 	const board = minesweeper.start();
+	const board = minesweeper.start();
 	msg.channel.send(board);
 
 };
