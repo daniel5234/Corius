@@ -17,8 +17,8 @@ exports.run = (client, msg, args) => {
     	mines: mine,
     	emote: 'boom',
 	spaces: true,
-    	zeroFirstCell: true,
-	revealFirstCell: false,
+    	zeroFirstCell: false,
+	revealFirstCell: true,
     	returnType: 'emoji',
 	});
 	var board = minesweeper.start();
