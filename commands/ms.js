@@ -4,11 +4,11 @@ const Minesweeper = require('discord.js-minesweeper');
 
 exports.run = (client, msg, args) => {
 	
-	const row = args[0];
-	const column = args[1];
-	const mine = args[2];
+	const row = parseInt(args[0]);
+	const column = parseInt(args[1]);
+	const mine = parseInt(args[2]);
 	if (!row||!column||!mine) {
-		return msg.channel.send(`!ms <rows> <columns> <mines>`)
+		return msg.channel.send("`!ms <rows> <columns> <mines>`")
 	}
 
     const minesweeper = new Minesweeper({
@@ -16,9 +16,9 @@ exports.run = (client, msg, args) => {
     	columns: column,
     	mines: mine,
     	emote: 'boom',
-		spaces: true,
+	spaces: true,
     	zeroFirstCell: true,
-		revealFirstCell: false,
+	revealFirstCell: false,
     	returnType: 'emoji',
 	});
 	var board = minesweeper.start();
