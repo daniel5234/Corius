@@ -5,8 +5,8 @@ const talkedRecently = new Set();
 exports.run = (client, msg, args) => {
 	
 	
-	if (talkedRecently.has(msg.author.id)&&msg.author.id!="716345121326760036") {
-           msg.channel.send("Wait 1 minute before getting typing this again. - " + msg.author);
+	if (talkedRecently.has(msg.author.id)) {
+           msg.channel.send("Wait 20 seconds before getting typing this again. - " + msg.author);
     } else {		
 		const row = parseInt(args[0]);
 		const column = parseInt(args[1]);
@@ -29,7 +29,7 @@ exports.run = (client, msg, args) => {
 		return board ? msg.channel.send(board) : msg.channel.send(':warning: You have provided invalid data.');
 			
         talkedRecently.add(msg.author.id);
-        setTimeout(() => {talkedRecently.delete(msg.author.id)}, 60000);
+        setTimeout(() => {talkedRecently.delete(msg.author.id)}, 20000);
     }
 	
 	
