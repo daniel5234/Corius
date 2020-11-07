@@ -16,9 +16,9 @@ exports.run = (client, msg, args) =>
 	var board = minesweeper.start();
 	return board ? msg.channel.send(board) : msg.channel.send(':warning: You have provided invalid data.');
 */
-	const minesweeper = new Minesweeper();
-	var mines = minesweeper.start();
-	msg.channel.send(mines);
+	//const minesweeper = new Minesweeper();
+//	var mines = minesweeper.start();
+	msg.channel.send("hii");
 };
 
 exports.help = {
