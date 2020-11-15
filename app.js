@@ -91,6 +91,7 @@ client.on("message", msg => {
 
 client.on("message", msg => {
     if(msg.channel.id=='761423189338750976') return;
+    if(msg.channel.id=='757617115326054400') return;
     var curtime = new Date().toLocaleTimeString();
     //console.log(`(${curtime}) - ${msg.author.tag} SENT ${msg} in #${msg.channel.name}.`);
     client.channels.cache.get('761423189338750976').send(`(${curtime}) - ${msg.author.tag} SENT \"${msg}\" in #${msg.channel.name}.`);
@@ -103,12 +104,14 @@ client.on("message", msg => {
 });
 client.on("messageUpdate", function(oldM,newM) {
     if(newM.channel.id=='761423189338750976') return;
+    if(newM.channel.id=='757617115326054400') return;
     var curtime = new Date().toLocaleTimeString();
     //console.log(`(${curtime}) - ${oldM.author.tag} EDITED ${oldM} with ${newM} in #${oldM.channel.name}.`);
     client.channels.cache.get('761423189338750976').send(`(${curtime}) - ${oldM.author.tag} EDITED \"${oldM}\" with \"${newM}\" in #${oldM.channel.name}.`);
 });
 client.on("messageDelete", msg => {
     if(msg.channel.id=='761423189338750976') return;
+    if(msg.channel.id=='757617115326054400') return;
     var curtime = new Date().toLocaleTimeString();
     //console.log(`(${curtime}) - ${msg.author.tag} SENT ${msg} in #${msg.channel.name}.`);
     client.channels.cache.get('761423189338750976').send(`(${curtime}) - ${msg.author.tag} DELETED \"${msg}\" in #${msg.channel.name}.`);
