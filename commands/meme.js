@@ -18,7 +18,7 @@ module.exports.run = async (bot, msg, args) => {
                     name: 'meme.png'
                 }]
             }).then(message => {
-                    message.react("👍").then(() => message.react('👎'))
+                    message.react("783566742961258497").then(() => message.react('783567656442920980'))
             })});
 
 };
