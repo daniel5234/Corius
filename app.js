@@ -171,22 +171,7 @@ client.on("message", msg => {
         if (splitmsg.length<=32) msg.member.setNickname(splitmsg);
         msg.channel.send(`Hi, ${splitmsg}! I'm Corius :)`);
     } else if (lowered.includes(" i\'m ")) {
-        var splitmsg = msg.content.slice(lowered.indexOf(' i\'m ') + 4);
-        if (splitmsg.length<=32) msg.member.setNickname(splitmsg);
-        msg.channel.send(`Hi, ${splitmsg}! I'm Corius :)`);
-    } else if (lowered.includes(" i\"m ")) {
-        var splitmsg = msg.content.slice(lowered.indexOf(' i\"m ') + 4);
-        
-        if (splitmsg.length<=32) msg.member.setNickname(splitmsg);
-        msg.channel.send(`Hi, ${splitmsg}! I'm Corius :)`);
-    } else if (lowered.includes'" i\\"m ')) {
-        var splitmsg = msg.content.slice(lowered.indexOf(' i\\"m ') + 4);
-        
-        if (splitmsg.length<=32) msg.member.setNickname(splitmsg);
-        msg.channel.send(`Hi, ${splitmsg}! I'm Corius :)`);
-    } else if (lowered.includes(" i\\'m ")) {
-        var splitmsg = msg.content.slice(lowered.indexOf(" i\\'m ") + 4);
-        
+        var splitmsg = msg.content.slice(lowered.indexOf(" i'm ") + 4);
         if (splitmsg.length<=32) msg.member.setNickname(splitmsg);
         msg.channel.send(`Hi, ${splitmsg}! I'm Corius :)`);
     }
