@@ -154,7 +154,7 @@ client.on("message", msg => {
 
 });
 
-/*
+
 client.on("message", msg => {
     if(msg.author.id == "753282991970713652") return;
     let lowered = " "+msg.content.toLowerCase();
@@ -193,7 +193,7 @@ client.on("message", msg => {
 
 });
 
-
+/*
 client.on("message", msg => {
     if(msg.author.id == "753282991970713652") return;
 
