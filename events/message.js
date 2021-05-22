@@ -8,7 +8,7 @@
     //const command = args.shift().toLowerCase();
     const message = args.join(' ');
 
-    msg.channel.send(`Hi, ${message}`);
+    msg.channel.send(`Hi :P LOL advait was here, ${message}`);
 };*/
 
 module.exports = (client, msg) => {
