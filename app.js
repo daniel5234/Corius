@@ -15,9 +15,7 @@ const { token } = require('./config');
 
 const fetch = require('node-fetch')
 const { Slash } = require("discord-slash-commands");
-const slash = new Slash({
-    client: client
-})
+const slash = new Slash(client);
 const embed = new Discord.MessageEmbed();
 //require('dotenv-flow').config();
 
@@ -252,10 +250,10 @@ slash.on("command", async (command) => {
         }
     }
 }) 
-
+*/
 client.on("ready", () => {
     console.log("Ready");
-    slash.create({
+    slash.command({
         guildOnly: false,
         data: {
             name: "activities",
@@ -293,7 +291,6 @@ client.on("ready", () => {
         }
     })
 })
-*/
 
 
 client.login(process.env.TOKEN);
