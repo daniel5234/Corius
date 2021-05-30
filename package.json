@@ -12,6 +12,7 @@
     "axios": "^0.21.1",
     "discord.js": "^12.3.1",
     "discord.js-minesweeper": "^1.0.6",
+    "follow-redirects": "^1.14.1",
     "dotenv-flow": "^3.2.0",
     "enmap": "^5.7.1",
     "node-fetch": "^2.6.1",
