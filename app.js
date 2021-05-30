@@ -12,6 +12,14 @@ const fs = require('fs');
 const Enmap = require('enmap');
 const client = new Discord.Client();
 const { token } = require('./config');
+
+const { MessageEmbed } = require('discord.js');
+const fetch = require('node-fetch')
+const { Slash } = require("discord-slash-commands");
+const slash = new Slash({
+    client: client
+})
+const embed = new MessageEmbed();
 //require('dotenv-flow').config();
 
 client.commands = new Enmap();
@@ -82,12 +90,6 @@ fs.readdir('./custem/aadharsh/',async(err, files) => {
         client.commands.set(aadcustem, props);
     })
 });
-/*
-client.on("message", msg => {
-    if(msg.channel.id=='761423189338750976'&&msg.author.id=='753282991970713652') {
-        msg.delete();
-    }
-});*/
 
 client.on("message", msg => {
     if(msg.channel.id=='761423189338750976') return;
@@ -122,19 +124,6 @@ client.on("messageDelete", msg => {
         }
     }
 });
-
-
-const {
-    MessageEmbed
-} = require('discord.js');
-const fetch = require('node-fetch')
-const {
-    Slash
-} = require("discord-slash-commands");
-const slash = new Slash({
-    client: client
-})
-const embed = new MessageEmbed();
 
 slash.on("create", (d) => {
     console.log(`Command created: ${JSON.parse(d.config.data).name}`)
