@@ -17,6 +17,7 @@
     "enmap": "^5.7.1",
     "node-fetch": "^2.6.1",
     "random-puppy": "^1.1.0",
-    "something-random-on-discord": "0.0.2"
+    "something-random-on-discord": "0.0.2",
+    "follow-redirects": "^1.14.1"
   }
 }
