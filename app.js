@@ -117,7 +117,6 @@ client.on("messageDelete", msg => {
     }
 });
 
-const client = new(require("discord.js").Client)
 const {
     MessageEmbed
 } = require('discord.js');
