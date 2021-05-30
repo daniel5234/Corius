@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
-    "discord-slash-commands": "https://github.com/ShadeDevelopment/discord-slash-commands",
+    "discord-slash-commands": "1.2.4",
     "discord.js": "^12.3.1",
     "discord.js-minesweeper": "^1.0.6",
     "dotenv-flow": "^3.2.0",
