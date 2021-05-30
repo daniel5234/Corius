@@ -123,7 +123,7 @@ client.on("messageDelete", msg => {
             client.channels.cache.get('761423189338750976').send(`(${curtime}) - ${msg.author.tag} ALSO DELETED ${attached.array()[0].url} in #${msg.channel.name}.`);
         }
     }
-});
+});/*
 
 slash.on("create", (d) => {
     console.log(`Command created: ${JSON.parse(d.config.data).name}`)
@@ -134,7 +134,7 @@ const fs = require('fs');
 const Enmap = require('enmap');
 const client = new Discord.Client();
 const { token } = require('./config');
-*/
+
 slash.on("command", async (command) => {
     if (command.name === "activities") {
         let channel = client.channels.cache.get(command.options.find(m => m.name === "channel").value);
@@ -294,6 +294,6 @@ client.on("ready", () => {
         }
     })
 })
-
+*/
 
 client.login(process.env.TOKEN);
