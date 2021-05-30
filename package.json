@@ -16,6 +16,7 @@
     "dotenv-flow": "^3.2.0",
     "enmap": "^5.7.1",
     "node-fetch": "^2.6.1",
+    "prism-media": "^1.2.9",
     "random-puppy": "^1.1.0",
     "something-random-on-discord": "0.0.2",
     "discord-slash-commands": "https://github.com/ShadeDevelopment/discord-slash-commands"
