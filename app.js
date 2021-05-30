@@ -12,11 +12,6 @@ const fs = require('fs');
 const Enmap = require('enmap');
 const client = new Discord.Client();
 const { token } = require('./config');
-
-const fetch = require('node-fetch')
-const { Slash } = require("discord-slash-commands");
-const slash = new Slash(client);
-const embed = new Discord.MessageEmbed();
 //require('dotenv-flow').config();
 
 client.commands = new Enmap();
@@ -120,17 +115,24 @@ client.on("messageDelete", msg => {
             client.channels.cache.get('761423189338750976').send(`(${curtime}) - ${msg.author.tag} ALSO DELETED ${attached.array()[0].url} in #${msg.channel.name}.`);
         }
     }
-});/*
+});
+
+const client = new(require("discord.js").Client)
+const {
+    MessageEmbed
+} = require('discord.js');
+const fetch = require('node-fetch')
+const {
+    Slash
+} = require("discord-slash-commands");
+const slash = new Slash({
+    client: client
+})
+const embed = new MessageEmbed();
 
 slash.on("create", (d) => {
     console.log(`Command created: ${JSON.parse(d.config.data).name}`)
 })
-/*
-const Discord = require('discord.js');
-const fs = require('fs');
-const Enmap = require('enmap');
-const client = new Discord.Client();
-const { token } = require('./config');
 
 slash.on("command", async (command) => {
     if (command.name === "activities") {
@@ -249,11 +251,11 @@ slash.on("command", async (command) => {
 
         }
     }
-}) 
-*/
+})
+
 client.on("ready", () => {
     console.log("Ready");
-    slash.command({
+    slash.create({
         guildOnly: false,
         data: {
             name: "activities",
@@ -291,6 +293,7 @@ client.on("ready", () => {
         }
     })
 })
+
 
 
 client.login(process.env.TOKEN);
