@@ -252,7 +252,7 @@ slash.on("command", async (command) => {
 
         }
     }
-}) */
+}) 
 
 client.on("ready", () => {
     console.log("Ready");
@@ -294,6 +294,7 @@ client.on("ready", () => {
         }
     })
 })
+*/
 
 
 client.login(process.env.TOKEN);
