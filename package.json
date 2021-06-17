@@ -9,12 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
+    "discord-slash-commands": "git+https://github.com/ShadeDevelopment/discord-slash-commands.git",
     "discord.js": "^12.3.1",
     "discord.js-minesweeper": "^1.0.6",
     "dotenv-flow": "^3.2.0",
     "enmap": "^5.7.1",
     "node-fetch": "^2.6.1",
     "random-puppy": "^1.1.0",
-    "something-random-on-discord": "0.0.2"
+    "something-random-on-discord": "0.0.2",
+    "follow-redirects": "^1.14.1"
   }
 }
